@@ -8,11 +8,9 @@ import { FirestoreProvider } from 'react-firestore';
 
 import { ThemeProvider } from 'styled-components';
 
-import { UIProvider } from 'providers';
-import { Activity, Camera, Debug, Sounds } from 'scenes/Activity';
+import { Activity, Sounds } from 'scenes/Activity';
 import App from 'scenes/App';
-import Interstitial from 'scenes/Interstitial';
-import { foundation } from 'styles/foundation';
+import GlobalStyles, { foundation } from 'styles/foundation';
 import { history } from 'store';
 
 const {
@@ -33,22 +31,8 @@ firestore.settings(firestoreSettings);
 
 const Main = () => (
   <Switch>
-    <Route exact path="/scenes/activity/debug" component={Debug} />
     <Route exact path="/scenes/activity/sounds" component={Sounds} />
     <Route exact path="/scenes/activity" component={Activity} />
-    <Route exact path="/scenes/camera" component={Camera} />
-
-    <Route
-      exact
-      path="/scenes/brb"
-      render={() => <Interstitial message="Be Right Back" />}
-    />
-    <Route
-      exact
-      path="/scenes/start"
-      render={() => <Interstitial message="Please Stand By" />}
-    />
-
     <Route component={App} />
   </Switch>
 );
@@ -60,9 +44,8 @@ const Root = (
     <Provider store={store}>
       <Router history={history}>
         <ThemeProvider theme={foundation}>
-          <UIProvider>
-            <Main />
-          </UIProvider>
+          <GlobalStyles />
+          <Main />
         </ThemeProvider>
       </Router>
     </Provider>

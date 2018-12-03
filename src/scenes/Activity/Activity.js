@@ -6,16 +6,13 @@ import PropTypes from 'prop-types';
 import { Parallax, ParallaxLayer } from 'react-spring/dist/addons';
 
 import {
-  Ava,
   Logotype,
   Hero,
   Notifier,
   Progress,
   Queue,
-  Summaries,
-  Ticker
+  Summaries
 } from 'components';
-import UIContext from 'contexts';
 import * as Providers from 'providers';
 
 import styled from 'styled-components';
@@ -35,12 +32,11 @@ const structureProps = {
   render: PropTypes.func.isRequired
 };
 
-const TickerArea = ({ state, isVisible }) => (
+const TickerArea = ({ isVisible }) => (
   <ParallaxLayer offset={0} speed={-0.3}>
     <Frame.Wrapper>
       <StyledHero>
         <Logotype isVisible={isVisible} />
-        <Ticker events={state.data} isVisible={isVisible} />
         <Summaries isVisible={isVisible} />
       </StyledHero>
     </Frame.Wrapper>
@@ -88,9 +84,6 @@ class Structure extends PureComponent {
     const { render } = this.props;
     return (
       <Fragment>
-        <UIContext.Consumer>
-          {({ mode }) => <Ava version={mode} />}
-        </UIContext.Consumer>
         <Frame.OuterBorder />
         <Parallax
           pages={2}
