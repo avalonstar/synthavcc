@@ -9,6 +9,7 @@ import {
   Logotype,
   Hero,
   Notifier,
+  Participant,
   Progress,
   Queue,
   Summaries
@@ -37,6 +38,8 @@ const TickerArea = ({ isVisible }) => (
     <Frame.Wrapper>
       <StyledHero>
         <Logotype isVisible={isVisible} />
+        <div />
+        <Participant name="Avalonstar" />
         <Summaries isVisible={isVisible} />
       </StyledHero>
     </Frame.Wrapper>

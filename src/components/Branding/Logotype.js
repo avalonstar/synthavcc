@@ -50,7 +50,7 @@ const Logotype = ({ isVisible }) => (
       initialPose="exit"
       pose={isVisible ? 'enter' : 'exit'}
     >
-      Avalonstar
+      A Very Crusader Christmas 2018
     </SplitText>
     <Period initialPose="exit" pose={isVisible ? 'enter' : 'exit'}>
       .
