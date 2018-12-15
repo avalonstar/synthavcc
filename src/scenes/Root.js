@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Activity, Sounds } from 'scenes/Activity';
 import App from 'scenes/App';
-import GlobalStyles, { foundation } from 'styles/foundation';
+import { foundation } from 'styles/foundation';
 import { history } from 'store';
 
 const {
@@ -44,7 +44,6 @@ const Root = (
     <Provider store={store}>
       <Router history={history}>
         <ThemeProvider theme={foundation}>
-          <GlobalStyles />
           <Main />
         </ThemeProvider>
       </Router>
