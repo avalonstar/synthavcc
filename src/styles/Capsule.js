@@ -30,6 +30,10 @@ const Stat = styled.div`
 
   box-shadow: inset 1px 0 0 0 ${props => props.theme.colors.gray[6]};
   font-weight: 800;
+
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
 `;
 
 export default {

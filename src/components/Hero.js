@@ -22,7 +22,7 @@ Hero.defaultProps = defaultProps;
 const Wrapper = styled.div`
   display: grid;
   width: calc(${props => props.theme.frame.width} - 36px * 2);
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
 
   align-items: center;
   padding: 12px 36px 0;

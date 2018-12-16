@@ -6,3 +6,4 @@ export { Queue } from './Queue';
 export { default as Participant } from './Participant';
 export { Progress } from './Subscriptions';
 export { Summaries } from './Summary';
+export { default as Uptime } from './Uptime';

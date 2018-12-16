@@ -6,7 +6,7 @@ const propTypes = {
   children: PropTypes.func.isRequired
 };
 
-class ParticipantProvider extends PureComponent {
+class EventProvider extends PureComponent {
   render() {
     const { children } = this.props;
     return (
@@ -18,6 +18,6 @@ class ParticipantProvider extends PureComponent {
   }
 }
 
-ParticipantProvider.propTypes = propTypes;
+EventProvider.propTypes = propTypes;
 
-export default ParticipantProvider;
+export default EventProvider;

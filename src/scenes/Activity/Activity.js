@@ -12,7 +12,8 @@ import {
   Participant,
   Progress,
   Queue,
-  Summaries
+  Summaries,
+  Uptime
 } from 'components';
 import * as Providers from 'providers';
 
@@ -39,7 +40,8 @@ const TickerArea = ({ isVisible }) => (
       <StyledHero>
         <Logotype isVisible={isVisible} />
         <div />
-        <Participant name="Avalonstar" />
+        <Uptime />
+        <Participant />
         <Summaries isVisible={isVisible} />
       </StyledHero>
     </Frame.Wrapper>

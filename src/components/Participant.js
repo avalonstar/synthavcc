@@ -25,9 +25,9 @@ const Display = ({ caster }) => (
 );
 
 const Participant = () => (
-  <Providers.Participant>
+  <Providers.Event>
     {({ caster }) => <Display caster={caster} />}
-  </Providers.Participant>
+  </Providers.Event>
 );
 
 Display.propTypes = propTypes;
